@@ -17,8 +17,6 @@ class Solution(object):
         while i < len(t):
             count_t[ord(t[i]) - 97] += 1
             i += 1
-        i = 0
-        j = 0
         if len(s) == len(t):
             return count_s == count_t
         else:
