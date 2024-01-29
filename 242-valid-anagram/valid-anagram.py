@@ -21,6 +21,6 @@ class Solution(object):
         j = 0
         if len(s) == len(t):
             return count_s == count_t
-        elif len(s) > len(t)  or len(t) > len(s):
+        else:
             return False
         
