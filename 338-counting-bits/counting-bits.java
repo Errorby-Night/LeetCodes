@@ -1,18 +1,14 @@
 class Solution {
-    public int binOne(int n){
-        int a = 0;
-        while(n > 0){
-            if(n % 2 == 1)
-                a++;
-            n /= 2;
+        public int[] countBits(int num) {
+        if(num<0) return new int[0];
+        int[] count = new int[num+1];
+        for(int i=1; i<=num; i++){
+            if((i&1)==1){ // odd
+                count[i] = count[i-1]+1;
+            } else { // even
+                count[i] = count[i>>1];
+            }
         }
-        return a;
-    }
-
-    public int[] countBits(int n) {
-        int ans[] = new int[n + 1];
-        for(int i = 0; i <= n; i++)
-            ans[i] = binOne(i);
-        return ans;
+        return count;
     }
 }
