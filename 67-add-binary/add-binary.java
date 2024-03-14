@@ -8,7 +8,7 @@ class Solution {
             if (i >= 0) sum += a.charAt(i--) - '0';
             if (j >= 0) sum += b.charAt(j--) - '0';
             result.insert(0, sum % 2);
-            carry = sum / 2;
+            carry = sum > 1 ? 1 : 0;
         }
 
         return result.toString();
