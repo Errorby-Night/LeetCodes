@@ -1,5 +1,9 @@
 class Solution:
     def maxDepth(self, s: str) -> int:
+        if len(s) == 0:
+            return 0
+        if len(s) == 1 and (s != '(' or s != ')'):
+            return 0
         count = 0
         max_num = 0
         for i in s:
